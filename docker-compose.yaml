@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+    dbt-local:
+        command: /bin/bash
+        build: .
+        volumes:
+            - ./:/app/
+            - ~/.dbt:/root/.dbt
+            - ~/.ssh:/root/.ssh
+
+        environment:
+            - PIPELINE_ENV= dev
+        ports:
+            - "8082:8082"
+
+    dbt-docs:
+        build: .
+        restart: always
+        ports:
+          - "8080:8080"
+        entrypoint: dbt docs serve
