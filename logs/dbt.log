@@ -2958,3 +2958,1762 @@ order by created_at desc, connector_id
 23:22:08.309251 [info ] [MainThread]: 
 23:22:08.310454 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=5 SKIP=2 TOTAL=21
 23:22:08.312138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa150b9db20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa150a9a640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa15898acd0>]}
+
+
+============================== 2022-02-06 00:56:56.652077 | 83238bac-0b0a-479f-b25d-417fdd5c7d7a ==============================
+00:56:56.652077 [info ] [MainThread]: Running with dbt=1.0.1
+00:56:56.653039 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/root/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+00:56:56.653781 [debug] [MainThread]: Tracking: tracking
+00:56:56.654729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9d58e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9d5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9d59a0>]}
+00:56:58.833288 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 1 files added, 0 files changed.
+00:56:58.834213 [debug] [MainThread]: Partial parsing: added file: taptester://models/dummy.sql
+00:56:58.834740 [debug] [MainThread]: Partial parsing: deleted file: taptester://models/example/my_first_dbt_model.sql
+00:56:58.835092 [debug] [MainThread]: Partial parsing: deleted file: taptester://models/example/my_second_dbt_model.sql
+00:56:58.858494 [debug] [MainThread]: 1699: static parser successfully parsed dummy.sql
+00:56:58.913739 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.taptester.example
+
+00:56:58.928248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a6fe070>]}
+00:56:58.982798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a7e3160>]}
+00:56:58.983658 [info ] [MainThread]: Found 20 models, 22 tests, 0 snapshots, 0 analyses, 443 macros, 0 operations, 0 seed files, 11 sources, 0 exposures, 0 metrics
+00:56:58.990535 [info ] [MainThread]: 
+00:56:58.992604 [debug] [MainThread]: Acquiring new snowflake connection "master"
+00:56:58.998397 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:56:59.028392 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:56:59.029177 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD"} */
+
+    show terse schemas in database FIVETRAN_DATABASE_DVD
+    limit 10000
+00:56:59.029762 [debug] [ThreadPool]: Opening a new connection, currently in state init
+00:57:00.088781 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.06 seconds
+00:57:00.093888 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: Close
+00:57:00.195249 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:57:00.201225 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:57:00.201870 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD"} */
+
+    show terse schemas in database FIVETRAN_DATABASE_DVD
+    limit 10000
+00:57:00.202532 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:00.827050 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.62 seconds
+00:57:00.829982 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: Close
+00:57:00.933505 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:57:00.939780 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD"
+00:57:00.940532 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD"} */
+
+    show terse schemas in database FIVETRAN_DATABASE_DVD
+    limit 10000
+00:57:00.941247 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:01.592101 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.65 seconds
+00:57:01.600636 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: Close
+00:57:01.699978 [debug] [ThreadPool]: Acquiring new snowflake connection "create_FIVETRAN_DATABASE_DVD_DVD_TAP"
+00:57:01.701586 [debug] [ThreadPool]: Acquiring new snowflake connection "create_FIVETRAN_DATABASE_DVD_DVD_TAP"
+00:57:01.703077 [debug] [ThreadPool]: Creating schema "_ReferenceKey(database='fivetran_database_dvd', schema='dvd_tap', identifier=None)"
+00:57:01.714485 [debug] [ThreadPool]: Using snowflake connection "create_FIVETRAN_DATABASE_DVD_DVD_TAP"
+00:57:01.715358 [debug] [ThreadPool]: On create_FIVETRAN_DATABASE_DVD_DVD_TAP: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "create_FIVETRAN_DATABASE_DVD_DVD_TAP"} */
+create schema if not exists FIVETRAN_DATABASE_DVD.DVD_TAP
+00:57:01.716001 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:02.257354 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.54 seconds
+00:57:02.259995 [debug] [ThreadPool]: On create_FIVETRAN_DATABASE_DVD_DVD_TAP: Close
+00:57:02.366492 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"
+00:57:02.386107 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"
+00:57:02.386815 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log
+00:57:02.387586 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:02.933025 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.55 seconds
+00:57:02.937137 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log: Close
+00:57:03.047989 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"
+00:57:03.052947 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"
+00:57:03.053562 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log
+00:57:03.054224 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:03.565427 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.51 seconds
+00:57:03.568160 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log: Close
+00:57:03.669860 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP"
+00:57:03.719406 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP"
+00:57:03.720208 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP
+00:57:03.720903 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+00:57:04.258964 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.54 seconds
+00:57:04.261497 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP: Close
+00:57:04.359330 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+00:57:04.360892 [info ] [MainThread]: 
+00:57:04.395306 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__account
+00:57:04.396224 [info ] [Thread-1  ]: 1 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__account.... [RUN]
+00:57:04.397520 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__account"
+00:57:04.398358 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__account
+00:57:04.399146 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__account
+00:57:04.406726 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__account"
+00:57:04.420124 [debug] [Thread-1  ]: finished collecting timing info
+00:57:04.420757 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__account
+00:57:04.468201 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__account"
+00:57:04.486389 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__account"
+00:57:04.487066 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__account: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__account"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__account  as
+      (with account as (
+    
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.account
+
+),
+
+fields as (
+
+    select
+        id as account_id,
+        country,
+        created_at,
+        name as account_name,
+        status
+        
+    from account
+
+)
+
+select * from fields
+      );
+00:57:04.487609 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:06.128290 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.64 seconds
+00:57:06.147813 [debug] [Thread-1  ]: finished collecting timing info
+00:57:06.148555 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__account: Close
+00:57:06.252130 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9018b0>]}
+00:57:06.253234 [info ] [Thread-1  ]: 1 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__account [[32mSUCCESS 1[0m in 1.85s]
+00:57:06.254521 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__account
+00:57:06.255346 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__account_membership
+00:57:06.256348 [info ] [Thread-1  ]: 2 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__account_membership [RUN]
+00:57:06.257828 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__account_membership"
+00:57:06.258555 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__account_membership
+00:57:06.259128 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__account_membership
+00:57:06.268526 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__account_membership"
+00:57:06.281229 [debug] [Thread-1  ]: finished collecting timing info
+00:57:06.281907 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__account_membership
+00:57:06.286823 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__account_membership"
+00:57:06.300557 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__account_membership"
+00:57:06.301084 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__account_membership: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__account_membership"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__account_membership  as
+      (with account_membership as (
+    
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.account_membership
+
+),
+
+fields as (
+
+    select
+        account_id,
+        user_id,
+        activated_at,
+        joined_at,
+        role as account_role
+        
+    from account_membership
+    
+)
+
+select * from fields
+      );
+00:57:06.301526 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:06.875994 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a21e59-3200-eaa2-0000-ec6d003d9912
+00:57:06.876913 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACCOUNT_MEMBERSHIP' does not exist or not authorized.
+00:57:06.877909 [debug] [Thread-1  ]: finished collecting timing info
+00:57:06.878688 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__account_membership: Close
+00:57:06.996693 [debug] [Thread-1  ]: Database Error in model stg_fivetran_log__account_membership (models/staging/stg_fivetran_log__account_membership.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACCOUNT_MEMBERSHIP' does not exist or not authorized.
+  compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__account_membership.sql
+00:57:06.997746 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0831d430>]}
+00:57:06.998777 [error] [Thread-1  ]: 2 of 20 ERROR creating table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__account_membership [[31mERROR[0m in 0.74s]
+00:57:06.999912 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__account_membership
+00:57:07.000796 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__active_volume
+00:57:07.001932 [info ] [Thread-1  ]: 3 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__active_volume [RUN]
+00:57:07.003606 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__active_volume"
+00:57:07.004450 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__active_volume
+00:57:07.005193 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__active_volume
+00:57:07.015569 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__active_volume"
+00:57:07.029071 [debug] [Thread-1  ]: finished collecting timing info
+00:57:07.029800 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__active_volume
+00:57:07.034496 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__active_volume"
+00:57:07.050666 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__active_volume"
+00:57:07.051432 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__active_volume: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__active_volume"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__active_volume  as
+      (with active_volume as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.active_volume
+
+),
+
+fields as (
+
+    select
+        id as active_volume_id,
+        connector_id as connector_name, -- Note: this misnomer will be changed by Fivetran soon
+        destination_id,
+        measured_at,
+        monthly_active_rows,
+        schema_name,
+        table_name
+    
+    from active_volume
+)
+
+select * from fields
+      );
+00:57:07.052096 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:07.615960 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a21e59-3200-ea7e-0000-ec6d003da122
+00:57:07.616576 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACTIVE_VOLUME' does not exist or not authorized.
+00:57:07.617264 [debug] [Thread-1  ]: finished collecting timing info
+00:57:07.617942 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__active_volume: Close
+00:57:07.728776 [debug] [Thread-1  ]: Database Error in model stg_fivetran_log__active_volume (models/staging/stg_fivetran_log__active_volume.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACTIVE_VOLUME' does not exist or not authorized.
+  compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__active_volume.sql
+00:57:07.731662 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b082adeb0>]}
+00:57:07.734480 [error] [Thread-1  ]: 3 of 20 ERROR creating table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__active_volume [[31mERROR[0m in 0.73s]
+00:57:07.737155 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__active_volume
+00:57:07.738866 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__connector_tmp
+00:57:07.742010 [info ] [Thread-1  ]: 4 of 20 START view model DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector_tmp [RUN]
+00:57:07.744958 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__connector_tmp"
+00:57:07.746394 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__connector_tmp
+00:57:07.747871 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__connector_tmp
+00:57:07.759811 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__connector_tmp"
+00:57:07.773112 [debug] [Thread-1  ]: finished collecting timing info
+00:57:07.773936 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__connector_tmp
+00:57:07.817497 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__connector_tmp"
+00:57:07.835080 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__connector_tmp"
+00:57:07.835774 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__connector_tmp: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__connector_tmp"} */
+
+  create or replace  view FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector_tmp 
+  
+   as (
+    select *
+from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.connector
+  );
+00:57:07.836256 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:08.459915 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.62 seconds
+00:57:08.462832 [debug] [Thread-1  ]: finished collecting timing info
+00:57:08.463450 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__connector_tmp: Close
+00:57:08.563402 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b082ad5b0>]}
+00:57:08.564332 [info ] [Thread-1  ]: 4 of 20 OK created view model DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector_tmp [[32mSUCCESS 1[0m in 0.82s]
+00:57:08.565096 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__connector_tmp
+00:57:08.565812 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__credits_used
+00:57:08.567054 [info ] [Thread-1  ]: 5 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__credits_used [RUN]
+00:57:08.568476 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__credits_used"
+00:57:08.569143 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__credits_used
+00:57:08.569807 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__credits_used
+00:57:08.577384 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__credits_used"
+00:57:08.592277 [debug] [Thread-1  ]: finished collecting timing info
+00:57:08.593080 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__credits_used
+00:57:08.597378 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__credits_used"
+00:57:08.613779 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__credits_used"
+00:57:08.614400 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__credits_used: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__credits_used"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__credits_used  as
+      (with  credits_used as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.credits_used
+
+),
+
+fields as (
+    
+    select 
+        destination_id,
+        measured_month,
+        credits_consumed
+    
+    from credits_used
+)
+
+select * from fields
+      );
+00:57:08.614956 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:09.126724 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a21e59-3200-ea7e-0000-ec6d003da12a
+00:57:09.127375 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.CREDITS_USED' does not exist or not authorized.
+00:57:09.128012 [debug] [Thread-1  ]: finished collecting timing info
+00:57:09.128512 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__credits_used: Close
+00:57:09.232202 [debug] [Thread-1  ]: Database Error in model stg_fivetran_log__credits_used (models/staging/stg_fivetran_log__credits_used.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.CREDITS_USED' does not exist or not authorized.
+  compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__credits_used.sql
+00:57:09.233489 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0827c130>]}
+00:57:09.234755 [error] [Thread-1  ]: 5 of 20 ERROR creating table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__credits_used [[31mERROR[0m in 0.67s]
+00:57:09.235952 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__credits_used
+00:57:09.236890 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__destination
+00:57:09.238090 [info ] [Thread-1  ]: 6 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination [RUN]
+00:57:09.239834 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__destination"
+00:57:09.240913 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__destination
+00:57:09.242024 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__destination
+00:57:09.254031 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__destination"
+00:57:09.267268 [debug] [Thread-1  ]: finished collecting timing info
+00:57:09.268197 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__destination
+00:57:09.275239 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__destination"
+00:57:09.290038 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__destination"
+00:57:09.290786 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__destination: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__destination"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination  as
+      (with destination as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.destination
+
+),
+
+fields as (
+
+    select
+        id as destination_id,
+        account_id,
+        created_at,
+        name as destination_name,
+        region
+    
+    from destination
+)
+
+select * from fields
+      );
+00:57:09.291632 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:10.793239 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.5 seconds
+00:57:10.800016 [debug] [Thread-1  ]: finished collecting timing info
+00:57:10.800677 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__destination: Close
+00:57:10.905802 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b088cf2e0>]}
+00:57:10.907795 [info ] [Thread-1  ]: 6 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination [[32mSUCCESS 1[0m in 1.67s]
+00:57:10.909239 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__destination
+00:57:10.910275 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__destination_membership
+00:57:10.911942 [info ] [Thread-1  ]: 7 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination_membership [RUN]
+00:57:10.916146 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__destination_membership"
+00:57:10.917534 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__destination_membership
+00:57:10.921407 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__destination_membership
+00:57:10.935394 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__destination_membership"
+00:57:10.947138 [debug] [Thread-1  ]: finished collecting timing info
+00:57:10.947778 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__destination_membership
+00:57:10.954438 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__destination_membership"
+00:57:10.966411 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__destination_membership"
+00:57:10.967003 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__destination_membership: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__destination_membership"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination_membership  as
+      (with destination_membership as (
+    
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.destination_membership
+
+),
+
+fields as (
+
+    select
+        destination_id,
+        user_id,
+        activated_at,
+        joined_at,
+        role as destination_role
+        
+    from destination_membership
+)
+
+select * from fields
+      );
+00:57:10.967570 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:11.594301 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a21e59-3200-ea7e-0000-ec6d003da142
+00:57:11.595107 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.DESTINATION_MEMBERSHIP' does not exist or not authorized.
+00:57:11.595967 [debug] [Thread-1  ]: finished collecting timing info
+00:57:11.596782 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__destination_membership: Close
+00:57:11.695573 [debug] [Thread-1  ]: Database Error in model stg_fivetran_log__destination_membership (models/staging/stg_fivetran_log__destination_membership.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.DESTINATION_MEMBERSHIP' does not exist or not authorized.
+  compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__destination_membership.sql
+00:57:11.696469 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b081a0910>]}
+00:57:11.697292 [error] [Thread-1  ]: 7 of 20 ERROR creating table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination_membership [[31mERROR[0m in 0.78s]
+00:57:11.698131 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__destination_membership
+00:57:11.698668 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__log
+00:57:11.699268 [info ] [Thread-1  ]: 8 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__log........ [RUN]
+00:57:11.700434 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__log"
+00:57:11.700991 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__log
+00:57:11.701554 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__log
+00:57:11.709531 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__log"
+00:57:11.725538 [debug] [Thread-1  ]: finished collecting timing info
+00:57:11.726166 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__log
+00:57:11.731346 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__log"
+00:57:11.746424 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__log"
+00:57:11.747091 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__log: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__log"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log  as
+      (with log as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.log
+    
+),
+
+fields as (
+
+    select
+        id as log_id, 
+        time_stamp as created_at,
+        connector_id, -- Note: the connector_id column used to erroneously equal the connector_name, NOT its id.
+        case when transformation_id is not null and event is null then 'TRANSFORMATION'
+        else event end as event_type, 
+        message_data,
+        case 
+        when transformation_id is not null and message_data like '%has succeeded%' then 'transformation run success'
+        when transformation_id is not null and message_data like '%has failed%' then 'transformation run failed'
+        else message_event end as event_subtype,
+        transformation_id
+
+    from log
+)
+
+select * from fields
+      );
+00:57:11.747735 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:13.435097 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.69 seconds
+00:57:13.444309 [debug] [Thread-1  ]: finished collecting timing info
+00:57:13.445977 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__log: Close
+00:57:13.550796 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08290130>]}
+00:57:13.552215 [info ] [Thread-1  ]: 8 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__log... [[32mSUCCESS 1[0m in 1.85s]
+00:57:13.553421 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__log
+00:57:13.554570 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__transformation
+00:57:13.555784 [info ] [Thread-1  ]: 9 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__transformation [RUN]
+00:57:13.557635 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__transformation"
+00:57:13.558648 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__transformation
+00:57:13.559766 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__transformation
+00:57:13.573367 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__transformation"
+00:57:13.586209 [debug] [Thread-1  ]: finished collecting timing info
+00:57:13.586766 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__transformation
+00:57:13.592105 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__transformation"
+00:57:13.605562 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__transformation"
+00:57:13.606320 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__transformation: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__transformation"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__transformation  as
+      (
+
+with transformation as (
+    
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.transformation
+    
+),
+
+fields as (
+
+    select
+        id as transformation_id,
+        created_at,
+        created_by_id as created_by_user_id,
+        destination_id,
+        name as transformation_name,
+        paused as is_paused,
+        script,
+        trigger_delay,
+        trigger_interval,
+        trigger_type
+        
+    from transformation
+    
+)
+
+select * from fields
+where transformation_id is not null
+      );
+00:57:13.607193 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:14.738300 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.13 seconds
+00:57:14.742310 [debug] [Thread-1  ]: finished collecting timing info
+00:57:14.742994 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__transformation: Close
+00:57:14.845045 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b081bf040>]}
+00:57:14.846108 [info ] [Thread-1  ]: 9 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__transformation [[32mSUCCESS 1[0m in 1.29s]
+00:57:14.847001 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__transformation
+00:57:14.847676 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__trigger_table
+00:57:14.848611 [info ] [Thread-1  ]: 10 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__trigger_table [RUN]
+00:57:14.850116 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__trigger_table"
+00:57:14.850844 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__trigger_table
+00:57:14.851541 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__trigger_table
+00:57:14.863156 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__trigger_table"
+00:57:14.878645 [debug] [Thread-1  ]: finished collecting timing info
+00:57:14.879253 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__trigger_table
+00:57:14.884223 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__trigger_table"
+00:57:14.896743 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__trigger_table"
+00:57:14.897347 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__trigger_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__trigger_table"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__trigger_table  as
+      (
+
+with trigger_table as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.trigger_table
+
+),
+
+fields as (
+
+    select 
+         
+        "TABLE" as trigger_table,
+        
+        
+        transformation_id
+    
+    from trigger_table
+    
+)
+
+select * from fields
+where transformation_id is not null
+      );
+00:57:14.897871 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:16.143833 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.25 seconds
+00:57:16.147054 [debug] [Thread-1  ]: finished collecting timing info
+00:57:16.147796 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__trigger_table: Close
+00:57:16.242500 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08165070>]}
+00:57:16.243395 [info ] [Thread-1  ]: 10 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__trigger_table [[32mSUCCESS 1[0m in 1.39s]
+00:57:16.244228 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__trigger_table
+00:57:16.244844 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__user
+00:57:16.246133 [info ] [Thread-1  ]: 11 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__user...... [RUN]
+00:57:16.247485 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__user"
+00:57:16.248215 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__user
+00:57:16.248879 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__user
+00:57:16.258114 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__user"
+00:57:16.271537 [debug] [Thread-1  ]: finished collecting timing info
+00:57:16.272405 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__user
+00:57:16.277078 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__user"
+00:57:16.295220 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__user"
+00:57:16.295939 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__user: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__user"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__user  as
+      (with fivetran_user as (
+
+    select * from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.user
+
+),
+
+fields as (
+
+    select
+        id as user_id,
+        created_at,
+        email,
+        email_disabled as has_disabled_email_notifications,
+        family_name as last_name,
+        given_name as first_name,
+        phone,
+        verified as is_verified
+        
+    from fivetran_user
+
+)
+
+select * from fields
+      );
+00:57:16.296642 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:16.896510 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01a21e59-3200-ea7e-0000-ec6d003da192
+00:57:16.897272 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.USER' does not exist or not authorized.
+00:57:16.898045 [debug] [Thread-1  ]: finished collecting timing info
+00:57:16.898808 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__user: Close
+00:57:17.000564 [debug] [Thread-1  ]: Database Error in model stg_fivetran_log__user (models/staging/stg_fivetran_log__user.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.USER' does not exist or not authorized.
+  compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__user.sql
+00:57:17.001637 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08260d60>]}
+00:57:17.002782 [error] [Thread-1  ]: 11 of 20 ERROR creating table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__user [[31mERROR[0m in 0.75s]
+00:57:17.003909 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__user
+00:57:17.004739 [debug] [Thread-1  ]: Began running node model.taptester.dummy
+00:57:17.005866 [info ] [Thread-1  ]: 12 of 20 START view model DVD_TAP.dummy......................................... [RUN]
+00:57:17.007291 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.taptester.dummy"
+00:57:17.007975 [debug] [Thread-1  ]: Began compiling node model.taptester.dummy
+00:57:17.008643 [debug] [Thread-1  ]: Compiling model.taptester.dummy
+00:57:17.013676 [debug] [Thread-1  ]: Writing injected SQL for node "model.taptester.dummy"
+00:57:17.026343 [debug] [Thread-1  ]: finished collecting timing info
+00:57:17.027027 [debug] [Thread-1  ]: Began executing node model.taptester.dummy
+00:57:17.032094 [debug] [Thread-1  ]: Writing runtime SQL for node "model.taptester.dummy"
+00:57:17.043843 [debug] [Thread-1  ]: Using snowflake connection "model.taptester.dummy"
+00:57:17.044453 [debug] [Thread-1  ]: On model.taptester.dummy: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.taptester.dummy"} */
+
+  create or replace  view FIVETRAN_DATABASE_DVD.DVD_TAP.dummy 
+  
+   as (
+    select 1 as number_
+  );
+00:57:17.045483 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:17.656774 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.61 seconds
+00:57:17.660227 [debug] [Thread-1  ]: finished collecting timing info
+00:57:17.660975 [debug] [Thread-1  ]: On model.taptester.dummy: Close
+00:57:17.756699 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08380fd0>]}
+00:57:17.757945 [info ] [Thread-1  ]: 12 of 20 OK created view model DVD_TAP.dummy.................................... [[32mSUCCESS 1[0m in 0.75s]
+00:57:17.758730 [debug] [Thread-1  ]: Finished running node model.taptester.dummy
+00:57:17.759285 [debug] [Thread-1  ]: Began running node model.fivetran_log.stg_fivetran_log__connector
+00:57:17.759988 [info ] [Thread-1  ]: 13 of 20 START table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector. [RUN]
+00:57:17.761118 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.stg_fivetran_log__connector"
+00:57:17.761790 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.stg_fivetran_log__connector
+00:57:17.762502 [debug] [Thread-1  ]: Compiling model.fivetran_log.stg_fivetran_log__connector
+00:57:17.786834 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__connector"
+00:57:17.787670 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__connector: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__connector"} */
+
+    describe table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector_tmp
+00:57:17.788570 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:18.313800 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.53 seconds
+00:57:18.373500 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.stg_fivetran_log__connector"
+00:57:18.382305 [debug] [Thread-1  ]: finished collecting timing info
+00:57:18.382875 [debug] [Thread-1  ]: Began executing node model.fivetran_log.stg_fivetran_log__connector
+00:57:18.388366 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.stg_fivetran_log__connector"
+00:57:18.400293 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.stg_fivetran_log__connector"
+00:57:18.400885 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__connector: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.stg_fivetran_log__connector"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector  as
+      (with connector as (
+
+    select * 
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector_tmp
+
+),
+
+fields as (
+    select
+        
+    
+    
+    _fivetran_deleted
+    
+ as 
+    
+    _fivetran_deleted
+    
+, 
+    
+    
+    _fivetran_synced
+    
+ as 
+    
+    _fivetran_synced
+    
+, 
+    
+    
+    connecting_user_id
+    
+ as 
+    
+    connecting_user_id
+    
+, 
+    
+    
+    connector_id
+    
+ as 
+    
+    connector_id
+    
+, 
+    
+    
+    connector_name
+    
+ as 
+    
+    connector_name
+    
+, 
+    cast(null as 
+    varchar
+) as 
+    
+    connector_type
+    
+ , 
+    
+    
+    connector_type_id
+    
+ as 
+    
+    connector_type_id
+    
+, 
+    
+    
+    destination_id
+    
+ as 
+    
+    destination_id
+    
+, 
+    
+    
+    paused
+    
+ as 
+    
+    paused
+    
+, 
+    cast(null as 
+    int
+) as 
+    
+    service_version
+    
+ , 
+    
+    
+    signed_up
+    
+ as 
+    
+    signed_up
+    
+
+
+
+        ,row_number() over ( partition by connector_name, destination_id order by _fivetran_synced desc ) as nth_last_record
+    from connector
+
+),
+
+final as (
+
+    select 
+        connector_id,
+        connector_name,
+        coalesce(connector_type_id, connector_type) as connector_type,
+        destination_id,
+        connecting_user_id,
+        paused as is_paused,
+        signed_up as set_up_at
+
+    from fields
+
+    -- Only look at the most recent one
+    where nth_last_record = 1
+)
+
+select * 
+from final
+      );
+00:57:19.105342 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.7 seconds
+00:57:19.108627 [debug] [Thread-1  ]: finished collecting timing info
+00:57:19.109520 [debug] [Thread-1  ]: On model.fivetran_log.stg_fivetran_log__connector: Close
+00:57:19.205461 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08380d00>]}
+00:57:19.206720 [info ] [Thread-1  ]: 13 of 20 OK created table model DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector [[32mSUCCESS 1[0m in 1.44s]
+00:57:19.207805 [debug] [Thread-1  ]: Finished running node model.fivetran_log.stg_fivetran_log__connector
+00:57:19.208526 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__transformation_status
+00:57:19.209734 [info ] [Thread-1  ]: 14 of 20 START table model DVD_TAP_fivetran_log.fivetran_log__transformation_status [RUN]
+00:57:19.211074 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.fivetran_log__transformation_status"
+00:57:19.211639 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.fivetran_log__transformation_status
+00:57:19.212340 [debug] [Thread-1  ]: Compiling model.fivetran_log.fivetran_log__transformation_status
+00:57:19.232226 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.fivetran_log__transformation_status"
+00:57:19.241989 [debug] [Thread-1  ]: finished collecting timing info
+00:57:19.242632 [debug] [Thread-1  ]: Began executing node model.fivetran_log.fivetran_log__transformation_status
+00:57:19.249688 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.fivetran_log__transformation_status"
+00:57:19.265655 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__transformation_status"
+00:57:19.266289 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__transformation_status: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__transformation_status"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__transformation_status  as
+      (
+
+with transformation as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__transformation
+),
+
+destination as (
+
+    select * 
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination
+),
+
+
+trigger_tables as (
+
+    select 
+        transformation_id, 
+        
+    listagg(trigger_table, ', ')
+
+ as trigger_tables 
+
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__trigger_table
+
+    group by 1
+),
+
+
+transformation_runs as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    where event_subtype = 'transformation run success' 
+        or event_subtype = 'transformation run failed' 
+),
+
+recent_runs as (
+
+    select 
+        transformation_id,
+        max(case when event_subtype = 'transformation run success'  then created_at else null end) as last_run_at,
+        max(case when event_subtype = 'transformation run failed'  then created_at else null end) as last_failure_at
+    
+    from transformation_runs
+    group by 1
+),
+
+transformation_join as (
+
+    select
+        transformation.*,
+        destination.destination_name,
+        recent_runs.last_run_at as last_successful_run_at,
+        case when recent_runs.last_run_at > recent_runs.last_failure_at or recent_runs.last_failure_at is null then 'success'
+        else 'failure' end as last_run_attempt
+        
+        ,
+        trigger_tables.trigger_tables
+        
+
+    from 
+    transformation 
+    join destination 
+        on destination.destination_id = transformation.destination_id
+
+       
+    left join trigger_tables
+        on trigger_tables.transformation_id = transformation.transformation_id
+    
+
+    left join recent_runs 
+        on recent_runs.transformation_id = transformation.transformation_id
+
+)
+
+
+select * from transformation_join
+      );
+00:57:19.266859 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:20.900307 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.63 seconds
+00:57:20.903821 [debug] [Thread-1  ]: finished collecting timing info
+00:57:20.904533 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__transformation_status: Close
+00:57:21.003508 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b08098a60>]}
+00:57:21.004498 [info ] [Thread-1  ]: 14 of 20 OK created table model DVD_TAP_fivetran_log.fivetran_log__transformation_status [[32mSUCCESS 1[0m in 1.79s]
+00:57:21.005559 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__transformation_status
+00:57:21.006434 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__connector_status
+00:57:21.007252 [info ] [Thread-1  ]: 15 of 20 START table model DVD_TAP_fivetran_log.fivetran_log__connector_status.. [RUN]
+00:57:21.008488 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.fivetran_log__connector_status"
+00:57:21.009001 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.fivetran_log__connector_status
+00:57:21.009622 [debug] [Thread-1  ]: Compiling model.fivetran_log.fivetran_log__connector_status
+00:57:21.069104 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.fivetran_log__connector_status"
+00:57:21.077020 [debug] [Thread-1  ]: finished collecting timing info
+00:57:21.077702 [debug] [Thread-1  ]: Began executing node model.fivetran_log.fivetran_log__connector_status
+00:57:21.083477 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.fivetran_log__connector_status"
+00:57:21.106855 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__connector_status"
+00:57:21.107361 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_status: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__connector_status"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__connector_status  as
+      (with connector_log as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    -- only looking at errors, warnings, and syncs here
+    where event_type = 'SEVERE'
+        or event_type = 'WARNING'
+        or event_subtype like 'sync%'
+        or (event_subtype = 'status' 
+            and 
+
+  json_extract_path_text(try_parse_json( message_data ), 'status' )
+
+ ='RESCHEDULED'
+            and 
+
+  json_extract_path_text(try_parse_json( message_data ), 'reason' )
+
+ like '%intended behavior%'
+            ) -- for priority-first syncs. these should be captured by event_type = 'WARNING' but let's make sure
+
+        -- whole reason is "We have rescheduled the connector to force flush data from the forward sync into your destination. This is intended behavior and means that the connector is working as expected."
+),
+
+schema_changes as (
+
+    select
+        connector_id,
+        count(*) as number_of_schema_changes_last_month
+
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    where 
+        
+
+    datediff(
+        day,
+        created_at,
+        
+    current_timestamp::
+    timestamp_ntz
+
+
+        )
+
+ <= 30
+        and event_subtype in ('create_table', 'alter_table', 'create_schema', 'change_schema_config')
+
+    group by 1
+
+),
+
+connector as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__connector
+
+),
+
+destination as (
+
+    select * 
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__destination
+),
+
+connector_metrics as (
+
+    select
+        connector.connector_id,
+        connector.connector_name,
+        connector.connector_type,
+        connector.destination_id,
+        connector.is_paused,
+        connector.set_up_at,
+        max(case when connector_log.event_subtype = 'sync_start' then connector_log.created_at else null end) as last_sync_started_at,
+
+        max(case when connector_log.event_subtype = 'sync_end' 
+            then connector_log.created_at else null end) as last_sync_completed_at,
+
+        max(case when connector_log.event_subtype = 'status'
+                and 
+
+  json_extract_path_text(try_parse_json( connector_log.message_data ), 'status' )
+
+ ='RESCHEDULED'
+                and 
+
+  json_extract_path_text(try_parse_json( connector_log.message_data ), 'reason' )
+
+ like '%intended behavior%'
+            then connector_log.created_at else null end) as last_priority_first_sync_completed_at,
+                
+
+        max(case when connector_log.event_type = 'SEVERE' then connector_log.created_at else null end) as last_error_at,
+        max(case when event_type = 'WARNING' then connector_log.created_at else null end) as last_warning_at
+
+    from connector 
+    left join connector_log 
+        on connector_log.connector_id = connector.connector_id
+    group by 1,2,3,4,5,6
+
+),
+
+connector_health as (
+
+    select
+        *,
+        case 
+            -- connector is paused
+            when is_paused then 'paused'
+
+            -- a sync has never been attempted
+            when last_sync_started_at is null then 'incomplete'
+
+            -- a priority-first sync has occurred, but a normal sync has not
+            when last_priority_first_sync_completed_at is not null and last_sync_completed_at is null then 'priority first sync'
+
+            -- a priority sync has occurred more recently than a normal one (may occurr if the connector has been paused and resumed)
+            when last_priority_first_sync_completed_at > last_sync_completed_at then 'priority first sync'
+
+            -- a sync has been attempted, but not completed, and it's not due to errors. also a priority-first sync hasn't
+            when last_sync_completed_at is null and last_error_at is null then 'initial sync in progress'
+
+            -- there's been an error since the connector last completed a sync
+            when last_error_at > last_sync_completed_at then 'broken'
+
+            -- there's never been a successful sync and there have been errors
+            when last_sync_completed_at is null and last_error_at is not null then 'broken'
+
+        else 'connected' end as connector_health
+
+    from connector_metrics
+),
+
+-- Joining with log to grab pertinent error/warning messagees
+connector_recent_logs as (
+
+    select 
+        connector_health.connector_id,
+        connector_health.connector_name,
+        connector_health.connector_type,
+        connector_health.destination_id,
+        connector_health.connector_health,
+        connector_health.last_sync_started_at,
+        connector_health.last_sync_completed_at,
+        connector_health.set_up_at,
+        connector_log.event_subtype,
+        connector_log.event_type,
+        connector_log.message_data
+
+    from connector_health 
+    left join connector_log 
+        on connector_log.connector_id = connector_health.connector_id
+        -- limiting relevance to since the last successful sync completion (if there has been one)
+        and connector_log.created_at > coalesce(connector_health.last_sync_completed_at, connector_health.last_priority_first_sync_completed_at, '2000-01-01') 
+        -- only looking at errors and warnings (excluding syncs - both normal and priority first)
+        and connector_log.event_type != 'INFO' 
+        -- need to explicitly avoid priority first statuses because they are of event_type WARNING
+        and not (connector_log.event_subtype = 'status' 
+            and 
+
+  json_extract_path_text(try_parse_json( connector_log.message_data ), 'status' )
+
+ ='RESCHEDULED'
+            and 
+
+  json_extract_path_text(try_parse_json( connector_log.message_data ), 'reason' )
+
+ like '%intended behavior%')
+
+    group by 1,2,3,4,5,6,7,8,9,10,11 -- de-duping error messages
+    
+
+),
+
+final as (
+
+    select
+        connector_recent_logs.connector_id,
+        connector_recent_logs.connector_name,
+        connector_recent_logs.connector_type,
+        connector_recent_logs.destination_id,
+        destination.destination_name,
+        connector_recent_logs.connector_health,
+        connector_recent_logs.last_sync_started_at,
+        connector_recent_logs.last_sync_completed_at,
+        connector_recent_logs.set_up_at,
+        coalesce(schema_changes.number_of_schema_changes_last_month, 0) as number_of_schema_changes_last_month
+        
+        
+        , 
+    listagg(distinct case when connector_recent_logs.event_type = 'SEVERE' then connector_recent_logs.message_data else null end, '\n')
+
+ as errors_since_last_completed_sync
+        , 
+    listagg(distinct case when connector_recent_logs.event_type = 'WARNING' then connector_recent_logs.message_data else null end, '\n')
+
+ as warnings_since_last_completed_sync
+        
+
+    from connector_recent_logs
+    left join schema_changes 
+        on connector_recent_logs.connector_id = schema_changes.connector_id 
+
+    join destination on destination.destination_id = connector_recent_logs.destination_id
+    group by 1,2,3,4,5,6,7,8,9,10
+)
+
+select * from final
+      );
+00:57:21.107764 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:22.542999 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.44 seconds
+00:57:22.546662 [debug] [Thread-1  ]: finished collecting timing info
+00:57:22.547253 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_status: Close
+00:57:22.647001 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b080b3400>]}
+00:57:22.647849 [info ] [Thread-1  ]: 15 of 20 OK created table model DVD_TAP_fivetran_log.fivetran_log__connector_status [[32mSUCCESS 1[0m in 1.64s]
+00:57:22.648708 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__connector_status
+00:57:22.649242 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__mar_table_history
+00:57:22.650180 [info ] [Thread-1  ]: 16 of 20 SKIP relation DVD_TAP_fivetran_log.fivetran_log__mar_table_history..... [[33mSKIP[0m]
+00:57:22.651178 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__mar_table_history
+00:57:22.651764 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__audit_table
+00:57:22.652878 [info ] [Thread-1  ]: 17 of 20 START incremental model DVD_TAP_fivetran_log.fivetran_log__audit_table. [RUN]
+00:57:22.654183 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:22.654743 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.fivetran_log__audit_table
+00:57:22.655220 [debug] [Thread-1  ]: Compiling model.fivetran_log.fivetran_log__audit_table
+00:57:22.691864 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:22.692590 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+select date(max(sync_start)) from FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table
+00:57:22.693243 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:23.504499 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.81 seconds
+00:57:23.533501 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.fivetran_log__audit_table"
+00:57:23.542651 [debug] [Thread-1  ]: finished collecting timing info
+00:57:23.543089 [debug] [Thread-1  ]: Began executing node model.fivetran_log.fivetran_log__audit_table
+00:57:23.604274 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:23.605572 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+
+    
+
+      create or replace temporary table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table__dbt_tmp  as
+      (
+
+with sync_log as (
+    
+    select 
+        *,
+        
+
+  json_extract_path_text(try_parse_json( message_data ), 'table' )
+
+ as table_name
+
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    where event_subtype in ('sync_start', 'sync_end', 'write_to_table_start', 'write_to_table_end', 'records_modified')
+
+    
+
+    -- Capture the latest timestamp in a call statement instead of a subquery for optimizing BQ costs on incremental runs-- load the result from the above query into a new variable-- the query_result is stored as a dataframe. Therefore, we want to now store it as a singular value.-- compare the new batch of data to the latest sync already stored in this model
+        and date(created_at) >= '2022-02-05'
+
+    
+),
+
+
+connector as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__connector_status
+
+),
+
+add_connector_info as (
+
+    select 
+        sync_log.*,
+        connector.connector_name,
+        connector.destination_id,
+        connector.destination_name
+
+    from sync_log join connector using(connector_id)
+),
+
+sync_timestamps as (
+
+    select
+        connector_id,
+        connector_name,
+        table_name,
+        event_subtype,
+        destination_id,
+        destination_name,
+
+        created_at as write_to_table_start,
+        
+        min(case when event_subtype = 'write_to_table_end' then created_at else null end) 
+            over (partition by connector_id, table_name order by created_at ROWS between CURRENT ROW AND UNBOUNDED FOLLOWING) as write_to_table_end,
+
+        max(case when event_subtype = 'sync_start' then created_at else null end) 
+            over (partition by connector_id order by created_at ROWS between UNBOUNDED PRECEDING and CURRENT ROW) as sync_start,
+
+        min(case when event_subtype = 'sync_end' then created_at else null end) 
+            over (partition by connector_id order by created_at ROWS between CURRENT ROW AND UNBOUNDED FOLLOWING) as sync_end, -- coalesce with next_sync_start
+
+        min(case when event_subtype = 'sync_start' then created_at else null end) 
+            over (partition by connector_id order by created_at ROWS between CURRENT ROW AND UNBOUNDED FOLLOWING) as next_sync_start
+
+    from add_connector_info
+
+),
+
+-- this will be the base for every record in the final CTE
+limit_to_table_starts as (
+
+    select *
+
+    from sync_timestamps 
+    where event_subtype = 'write_to_table_start'
+
+),
+
+records_modified_log as (
+
+    select 
+        connector_id,
+        created_at,
+        
+
+  json_extract_path_text(try_parse_json( message_data ), 'table' )
+
+ as table_name,
+        
+
+  json_extract_path_text(try_parse_json( message_data ), 'schema' )
+
+ as schema_name,
+        
+
+  json_extract_path_text(try_parse_json( message_data ), 'operationType' )
+
+ as operation_type,
+        cast (
+
+  json_extract_path_text(try_parse_json( message_data ), 'count' )
+
+ as 
+    int
+) as row_count
+
+    from sync_log 
+    where event_subtype = 'records_modified'
+
+),
+
+sum_records_modified as (
+
+    select
+        limit_to_table_starts.connector_id,
+        limit_to_table_starts.connector_name,
+        limit_to_table_starts.table_name,
+        limit_to_table_starts.destination_id,
+        limit_to_table_starts.destination_name,
+        limit_to_table_starts.write_to_table_start,
+        limit_to_table_starts.write_to_table_end,
+        limit_to_table_starts.sync_start,
+        case when limit_to_table_starts.sync_end > limit_to_table_starts.next_sync_start then null else limit_to_table_starts.sync_end end as sync_end,
+
+        sum(case when records_modified_log.operation_type = 'REPLACED_OR_INSERTED' then records_modified_log.row_count else 0 end) as sum_rows_replaced_or_inserted,
+        sum(case when records_modified_log.operation_type = 'UPDATED' then records_modified_log.row_count else 0 end) as sum_rows_updated,
+        sum(case when records_modified_log.operation_type = 'DELETED' then records_modified_log.row_count else 0 end) as sum_rows_deleted
+
+    from limit_to_table_starts
+
+    left join records_modified_log on 
+        limit_to_table_starts.connector_id = records_modified_log.connector_id
+        and limit_to_table_starts.table_name = records_modified_log.table_name
+        -- confine it to one sync
+        and records_modified_log.created_at > limit_to_table_starts.sync_start 
+        and records_modified_log.created_at < coalesce(limit_to_table_starts.sync_end, limit_to_table_starts.next_sync_start) 
+
+    group by 1,2,3,4,5,6,7,8,9
+
+),
+
+surrogate_key as (
+
+    select 
+        *,
+        md5(cast(coalesce(cast(connector_id as 
+    varchar
+), '') || '-' || coalesce(cast(destination_id as 
+    varchar
+), '') || '-' || coalesce(cast(table_name as 
+    varchar
+), '') || '-' || coalesce(cast(write_to_table_start as 
+    varchar
+), '') as 
+    varchar
+)) as unique_table_sync_key
+
+    from sum_records_modified
+)
+
+select *
+from surrogate_key
+      );
+00:57:24.488883 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.88 seconds
+00:57:24.509886 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:24.511282 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+
+    describe table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table__dbt_tmp
+00:57:24.614760 [debug] [Thread-1  ]: SQL status: SUCCESS 13 in 0.1 seconds
+00:57:24.637945 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:24.639113 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+
+    describe table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table
+00:57:24.744798 [debug] [Thread-1  ]: SQL status: SUCCESS 13 in 0.1 seconds
+00:57:24.780509 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:24.781265 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+
+    describe table "FIVETRAN_DATABASE_DVD"."DVD_TAP_FIVETRAN_LOG"."FIVETRAN_LOG__AUDIT_TABLE"
+00:57:24.853996 [debug] [Thread-1  ]: SQL status: SUCCESS 13 in 0.07 seconds
+00:57:24.897102 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.fivetran_log__audit_table"
+00:57:24.912333 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:24.912860 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__audit_table"} */
+begin;
+00:57:24.999841 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.09 seconds
+00:57:25.000854 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:25.001692 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: merge into FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table as DBT_INTERNAL_DEST
+        using FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__audit_table__dbt_tmp as DBT_INTERNAL_SOURCE
+        on 
+            DBT_INTERNAL_SOURCE.unique_table_sync_key = DBT_INTERNAL_DEST.unique_table_sync_key
+        
+
+    
+    when matched then update set
+        "CONNECTOR_ID" = DBT_INTERNAL_SOURCE."CONNECTOR_ID","CONNECTOR_NAME" = DBT_INTERNAL_SOURCE."CONNECTOR_NAME","TABLE_NAME" = DBT_INTERNAL_SOURCE."TABLE_NAME","DESTINATION_ID" = DBT_INTERNAL_SOURCE."DESTINATION_ID","DESTINATION_NAME" = DBT_INTERNAL_SOURCE."DESTINATION_NAME","WRITE_TO_TABLE_START" = DBT_INTERNAL_SOURCE."WRITE_TO_TABLE_START","WRITE_TO_TABLE_END" = DBT_INTERNAL_SOURCE."WRITE_TO_TABLE_END","SYNC_START" = DBT_INTERNAL_SOURCE."SYNC_START","SYNC_END" = DBT_INTERNAL_SOURCE."SYNC_END","SUM_ROWS_REPLACED_OR_INSERTED" = DBT_INTERNAL_SOURCE."SUM_ROWS_REPLACED_OR_INSERTED","SUM_ROWS_UPDATED" = DBT_INTERNAL_SOURCE."SUM_ROWS_UPDATED","SUM_ROWS_DELETED" = DBT_INTERNAL_SOURCE."SUM_ROWS_DELETED","UNIQUE_TABLE_SYNC_KEY" = DBT_INTERNAL_SOURCE."UNIQUE_TABLE_SYNC_KEY"
+    
+
+    when not matched then insert
+        ("CONNECTOR_ID", "CONNECTOR_NAME", "TABLE_NAME", "DESTINATION_ID", "DESTINATION_NAME", "WRITE_TO_TABLE_START", "WRITE_TO_TABLE_END", "SYNC_START", "SYNC_END", "SUM_ROWS_REPLACED_OR_INSERTED", "SUM_ROWS_UPDATED", "SUM_ROWS_DELETED", "UNIQUE_TABLE_SYNC_KEY")
+    values
+        ("CONNECTOR_ID", "CONNECTOR_NAME", "TABLE_NAME", "DESTINATION_ID", "DESTINATION_NAME", "WRITE_TO_TABLE_START", "WRITE_TO_TABLE_END", "SYNC_START", "SYNC_END", "SUM_ROWS_REPLACED_OR_INSERTED", "SUM_ROWS_UPDATED", "SUM_ROWS_DELETED", "UNIQUE_TABLE_SYNC_KEY")
+
+;
+00:57:25.714696 [debug] [Thread-1  ]: SQL status: SUCCESS 24 in 0.71 seconds
+00:57:25.716011 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__audit_table"
+00:57:25.716745 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: commit;
+00:57:26.025563 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.31 seconds
+00:57:26.029509 [debug] [Thread-1  ]: finished collecting timing info
+00:57:26.030285 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__audit_table: Close
+00:57:26.141855 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b081bbfd0>]}
+00:57:26.143346 [info ] [Thread-1  ]: 17 of 20 OK created incremental model DVD_TAP_fivetran_log.fivetran_log__audit_table [[32mSUCCESS 1[0m in 3.49s]
+00:57:26.144954 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__audit_table
+00:57:26.146193 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__connector_daily_events
+00:57:26.147662 [info ] [Thread-1  ]: 18 of 20 START table model DVD_TAP_fivetran_log.fivetran_log__connector_daily_events [RUN]
+00:57:26.149731 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.150808 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.fivetran_log__connector_daily_events
+00:57:26.152016 [debug] [Thread-1  ]: Compiling model.fivetran_log.fivetran_log__connector_daily_events
+00:57:26.181610 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.182383 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_daily_events: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__connector_daily_events"} */
+
+    
+        select  min( signed_up ) as min_date from FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.connector
+00:57:26.183012 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:26.732661 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.55 seconds
+00:57:26.767973 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.768822 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_daily_events: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__connector_daily_events"} */
+
+
+        select 
+
+    datediff(
+        day,
+        cast('2022-02-02' as date),
+        
+
+    dateadd(
+        week,
+        1,
+        
+    date_trunc('day', 
+    current_timestamp::
+    timestamp_ntz
+
+)
+
+        )
+
+
+        )
+00:57:26.868912 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.1 seconds
+00:57:26.890159 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.904533 [debug] [Thread-1  ]: finished collecting timing info
+00:57:26.905054 [debug] [Thread-1  ]: Began executing node model.fivetran_log.fivetran_log__connector_daily_events
+00:57:26.908981 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.931845 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__connector_daily_events"
+00:57:26.932656 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_daily_events: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__connector_daily_events"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__connector_daily_events  as
+      (-- depends_on: FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.connector
+
+with connector as (
+    
+    select * 
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__connector_status
+),
+
+-- grab api calls, schema changes, and record modifications
+log_events as (
+
+    select 
+        connector_id,
+        cast( 
+    date_trunc('day', created_at)
+ as date) as date_day,
+        case 
+            when event_subtype in ('create_table', 'alter_table', 'create_schema', 'change_schema_config') then 'schema_change' 
+            else event_subtype end as event_subtype,
+
+        sum(case when event_subtype = 'records_modified' then cast( 
+
+  json_extract_path_text(try_parse_json( message_data ), 'count' )
+
+ as 
+    int
+ )
+        else 1 end) as count_events 
+
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    where event_subtype in ('api_call', 
+                            'records_modified', 
+                            'create_table', 'alter_table', 'create_schema', 'change_schema_config') -- all schema changes
+                            
+        and connector_id is not null
+
+    group by 1,2,3
+),
+
+pivot_out_events as (
+
+    select
+        connector_id,
+        date_day,
+        max(case when event_subtype = 'api_call' then count_events else 0 end) as count_api_calls,
+        max(case when event_subtype = 'records_modified' then count_events else 0 end) as count_record_modifications,
+        max(case when event_subtype = 'schema_change' then count_events else 0 end) as count_schema_changes
+
+    from log_events
+    group by 1,2
+),
+
+connector_event_counts as (
+
+    select
+        pivot_out_events.date_day,
+        pivot_out_events.count_api_calls,
+        pivot_out_events.count_record_modifications,
+        pivot_out_events.count_schema_changes,
+        connector.connector_name,
+        connector.connector_id,
+        connector.connector_type,
+        connector.destination_name,
+        connector.destination_id,
+        connector.set_up_at
+    from
+    connector left join pivot_out_events 
+        on pivot_out_events.connector_id = connector.connector_id
+),
+
+spine as (
+
+    
+    
+    
+    
+    
+
+    
+
+/*
+call as follows:
+
+date_spine(
+    "day",
+    "to_date('01/01/2016', 'mm/dd/yyyy')",
+    "dateadd(week, 1, current_date)"
+)
+
+*/
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 10
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    dateadd(
+        day,
+        row_number() over (order by 1) - 1,
+        cast('2022-02-02' as date)
+        )
+
+
+    ) as date_day
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_day <= 
+
+    dateadd(
+        week,
+        1,
+        
+    date_trunc('day', 
+    current_timestamp::
+    timestamp_ntz
+
+)
+
+        )
+
+
+
+)
+
+select * from filtered
+
+ 
+),
+
+connector_event_history as (
+
+    select
+        cast(spine.date_day as date) as date_day,
+        connector_event_counts.connector_name,
+        connector_event_counts.connector_id,
+        connector_event_counts.connector_type,
+        connector_event_counts.destination_name,
+        connector_event_counts.destination_id,
+        max(case 
+            when cast(spine.date_day as date) = connector_event_counts.date_day then connector_event_counts.count_api_calls
+            else 0
+        end) as count_api_calls,
+        max(case 
+            when cast(spine.date_day as date) = connector_event_counts.date_day then connector_event_counts.count_record_modifications
+            else 0
+        end) as count_record_modifications,
+        max(case 
+            when cast(spine.date_day as date) = connector_event_counts.date_day then connector_event_counts.count_schema_changes
+            else 0
+        end) as count_schema_changes
+    from
+    spine join connector_event_counts
+        on spine.date_day  >= cast( 
+    date_trunc('day', connector_event_counts.set_up_at)
+ as date)
+
+    group by 1,2,3,4,5,6
+),
+
+-- now rejoin spine to get a complete calendar
+join_event_history as (
+    
+    select
+        spine.date_day,
+        connector_event_history.connector_name,
+        connector_event_history.connector_id,
+        connector_event_history.connector_type,
+        connector_event_history.destination_name,
+        connector_event_history.destination_id,
+        max(connector_event_history.count_api_calls) as count_api_calls,
+        max(connector_event_history.count_record_modifications) as count_record_modifications,
+        max(connector_event_history.count_schema_changes) as count_schema_changes
+
+    from
+    spine left join connector_event_history
+        on cast(spine.date_day as date) = connector_event_history.date_day
+
+    group by 1,2,3,4,5,6
+),
+
+final as (
+
+    select *
+    from join_event_history
+
+    where cast(date_day as timestamp) <= 
+    current_timestamp::
+    timestamp_ntz
+
+
+
+    order by date_day desc
+)
+
+select *
+from final
+      );
+00:57:27.914311 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.98 seconds
+00:57:27.917099 [debug] [Thread-1  ]: finished collecting timing info
+00:57:27.917959 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__connector_daily_events: Close
+00:57:28.020990 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a917130>]}
+00:57:28.023228 [info ] [Thread-1  ]: 18 of 20 OK created table model DVD_TAP_fivetran_log.fivetran_log__connector_daily_events [[32mSUCCESS 1[0m in 1.87s]
+00:57:28.025186 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__connector_daily_events
+00:57:28.027113 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__schema_changelog
+00:57:28.029211 [info ] [Thread-1  ]: 19 of 20 START table model DVD_TAP_fivetran_log.fivetran_log__schema_changelog.. [RUN]
+00:57:28.031955 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.fivetran_log.fivetran_log__schema_changelog"
+00:57:28.033669 [debug] [Thread-1  ]: Began compiling node model.fivetran_log.fivetran_log__schema_changelog
+00:57:28.035413 [debug] [Thread-1  ]: Compiling model.fivetran_log.fivetran_log__schema_changelog
+00:57:28.049362 [debug] [Thread-1  ]: Writing injected SQL for node "model.fivetran_log.fivetran_log__schema_changelog"
+00:57:28.062532 [debug] [Thread-1  ]: finished collecting timing info
+00:57:28.063052 [debug] [Thread-1  ]: Began executing node model.fivetran_log.fivetran_log__schema_changelog
+00:57:28.067500 [debug] [Thread-1  ]: Writing runtime SQL for node "model.fivetran_log.fivetran_log__schema_changelog"
+00:57:28.083007 [debug] [Thread-1  ]: Using snowflake connection "model.fivetran_log.fivetran_log__schema_changelog"
+00:57:28.083869 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__schema_changelog: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.fivetran_log.fivetran_log__schema_changelog"} */
+
+
+      create or replace transient table FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__schema_changelog  as
+      (with schema_changes as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log.stg_fivetran_log__log
+
+    where event_subtype in ('create_table', 'alter_table', 'create_schema', 'change_schema_config')
+),
+
+connector as (
+
+    select *
+    from FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log.fivetran_log__connector_status
+),
+
+add_connector_info as (
+
+    select 
+        schema_changes.*,
+        connector.connector_name,
+        connector.destination_id,
+        connector.destination_name
+
+    from schema_changes join connector using(connector_id)
+),
+
+final as (
+
+    select
+        connector_id,
+        connector_name,
+        destination_id,
+        destination_name,
+        created_at,
+        event_subtype,
+        message_data,
+
+        case 
+        when event_subtype = 'alter_table' then 
+
+  json_extract_path_text(try_parse_json( message_data ), 'table' )
+
+ 
+        when event_subtype = 'create_table' then 
+
+  json_extract_path_text(try_parse_json( message_data ), 'name' )
+
+ 
+        else null end as table_name,
+
+        case 
+        when event_subtype = 'create_schema' or event_subtype = 'create_table' then 
+
+  json_extract_path_text(try_parse_json( message_data ), 'schema' )
+
+ 
+        else null end as schema_name
+    
+    from add_connector_info
+)
+
+select * from final
+order by created_at desc, connector_id
+      );
+00:57:28.084663 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+00:57:29.264892 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.18 seconds
+00:57:29.271821 [debug] [Thread-1  ]: finished collecting timing info
+00:57:29.273103 [debug] [Thread-1  ]: On model.fivetran_log.fivetran_log__schema_changelog: Close
+00:57:29.378252 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '83238bac-0b0a-479f-b25d-417fdd5c7d7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b080b3b50>]}
+00:57:29.380600 [info ] [Thread-1  ]: 19 of 20 OK created table model DVD_TAP_fivetran_log.fivetran_log__schema_changelog [[32mSUCCESS 1[0m in 1.35s]
+00:57:29.382471 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__schema_changelog
+00:57:29.383831 [debug] [Thread-1  ]: Began running node model.fivetran_log.fivetran_log__credit_mar_destination_history
+00:57:29.385233 [info ] [Thread-1  ]: 20 of 20 SKIP relation DVD_TAP_fivetran_log.fivetran_log__credit_mar_destination_history [[33mSKIP[0m]
+00:57:29.386971 [debug] [Thread-1  ]: Finished running node model.fivetran_log.fivetran_log__credit_mar_destination_history
+00:57:29.391181 [debug] [MainThread]: Acquiring new snowflake connection "master"
+00:57:29.392590 [info ] [MainThread]: 
+00:57:29.393721 [info ] [MainThread]: Finished running 17 table models, 2 view models, 1 incremental model in 30.40s.
+00:57:29.394891 [debug] [MainThread]: Connection 'master' was properly closed.
+00:57:29.395744 [debug] [MainThread]: Connection 'model.fivetran_log.fivetran_log__schema_changelog' was properly closed.
+00:57:29.438437 [info ] [MainThread]: 
+00:57:29.439513 [info ] [MainThread]: [31mCompleted with 5 errors and 0 warnings:[0m
+00:57:29.440868 [info ] [MainThread]: 
+00:57:29.442273 [error] [MainThread]: [33mDatabase Error in model stg_fivetran_log__account_membership (models/staging/stg_fivetran_log__account_membership.sql)[0m
+00:57:29.443377 [error] [MainThread]:   002003 (42S02): SQL compilation error:
+00:57:29.444440 [error] [MainThread]:   Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACCOUNT_MEMBERSHIP' does not exist or not authorized.
+00:57:29.445451 [error] [MainThread]:   compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__account_membership.sql
+00:57:29.446632 [info ] [MainThread]: 
+00:57:29.447625 [error] [MainThread]: [33mDatabase Error in model stg_fivetran_log__active_volume (models/staging/stg_fivetran_log__active_volume.sql)[0m
+00:57:29.448839 [error] [MainThread]:   002003 (42S02): SQL compilation error:
+00:57:29.450267 [error] [MainThread]:   Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.ACTIVE_VOLUME' does not exist or not authorized.
+00:57:29.451361 [error] [MainThread]:   compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__active_volume.sql
+00:57:29.452498 [info ] [MainThread]: 
+00:57:29.453685 [error] [MainThread]: [33mDatabase Error in model stg_fivetran_log__credits_used (models/staging/stg_fivetran_log__credits_used.sql)[0m
+00:57:29.455151 [error] [MainThread]:   002003 (42S02): SQL compilation error:
+00:57:29.456723 [error] [MainThread]:   Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.CREDITS_USED' does not exist or not authorized.
+00:57:29.457668 [error] [MainThread]:   compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__credits_used.sql
+00:57:29.458639 [info ] [MainThread]: 
+00:57:29.459959 [error] [MainThread]: [33mDatabase Error in model stg_fivetran_log__destination_membership (models/staging/stg_fivetran_log__destination_membership.sql)[0m
+00:57:29.461084 [error] [MainThread]:   002003 (42S02): SQL compilation error:
+00:57:29.462016 [error] [MainThread]:   Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.DESTINATION_MEMBERSHIP' does not exist or not authorized.
+00:57:29.463170 [error] [MainThread]:   compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__destination_membership.sql
+00:57:29.464580 [info ] [MainThread]: 
+00:57:29.465601 [error] [MainThread]: [33mDatabase Error in model stg_fivetran_log__user (models/staging/stg_fivetran_log__user.sql)[0m
+00:57:29.466543 [error] [MainThread]:   002003 (42S02): SQL compilation error:
+00:57:29.467917 [error] [MainThread]:   Object 'FIVETRAN_DATABASE_DVD.DSM_FIVETRAN_LOG.USER' does not exist or not authorized.
+00:57:29.468977 [error] [MainThread]:   compiled SQL at target/run/fivetran_log/models/staging/stg_fivetran_log__user.sql
+00:57:29.470225 [info ] [MainThread]: 
+00:57:29.471422 [info ] [MainThread]: Done. PASS=13 WARN=0 ERROR=5 SKIP=2 TOTAL=20
+00:57:29.472725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9cad90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9cac40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a7e3730>]}
