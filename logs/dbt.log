@@ -4717,3 +4717,90 @@ order by created_at desc, connector_id
 00:57:29.470225 [info ] [MainThread]: 
 00:57:29.471422 [info ] [MainThread]: Done. PASS=13 WARN=0 ERROR=5 SKIP=2 TOTAL=20
 00:57:29.472725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9cad90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a9cac40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6b0a7e3730>]}
+
+
+============================== 2022-02-06 01:58:55.896817 | 694c517e-22f3-4e47-a4cf-48a73f67f6cf ==============================
+01:58:55.896817 [info ] [MainThread]: Running with dbt=1.0.1
+01:58:55.898083 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/root/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=['dummy'], selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+01:58:55.898797 [debug] [MainThread]: Tracking: tracking
+01:58:55.899750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85040e89a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85040e8a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85040e8a60>]}
+01:58:57.996695 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+01:58:57.997156 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+01:58:57.998660 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.taptester.example
+
+01:58:58.020078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '694c517e-22f3-4e47-a4cf-48a73f67f6cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8502de0a60>]}
+01:58:58.068384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '694c517e-22f3-4e47-a4cf-48a73f67f6cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8502fd2220>]}
+01:58:58.069041 [info ] [MainThread]: Found 20 models, 22 tests, 0 snapshots, 0 analyses, 443 macros, 0 operations, 0 seed files, 11 sources, 0 exposures, 0 metrics
+01:58:58.075163 [info ] [MainThread]: 
+01:58:58.076779 [debug] [MainThread]: Acquiring new snowflake connection "master"
+01:58:58.078447 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD"
+01:58:58.105308 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD"
+01:58:58.106143 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD"} */
+
+    show terse schemas in database FIVETRAN_DATABASE_DVD
+    limit 10000
+01:58:58.106978 [debug] [ThreadPool]: Opening a new connection, currently in state init
+01:58:58.938717 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.83 seconds
+01:58:58.942118 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD: Close
+01:58:59.055461 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"
+01:58:59.074879 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"
+01:58:59.075821 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP_fivetran_log
+01:58:59.076653 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+01:58:59.852126 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.78 seconds
+01:58:59.855249 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_fivetran_log: Close
+01:58:59.960738 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"
+01:58:59.968252 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"
+01:58:59.968938 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP_stg_fivetran_log
+01:58:59.969637 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+01:59:00.471715 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.5 seconds
+01:59:00.476271 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP_stg_fivetran_log: Close
+01:59:00.576363 [debug] [ThreadPool]: Acquiring new snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP"
+01:59:00.582836 [debug] [ThreadPool]: Using snowflake connection "list_FIVETRAN_DATABASE_DVD_DVD_TAP"
+01:59:00.583475 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "connection_name": "list_FIVETRAN_DATABASE_DVD_DVD_TAP"} */
+
+    show terse objects in FIVETRAN_DATABASE_DVD.DVD_TAP
+01:59:00.584012 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+01:59:01.103065 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.52 seconds
+01:59:01.111502 [debug] [ThreadPool]: On list_FIVETRAN_DATABASE_DVD_DVD_TAP: Close
+01:59:01.223923 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+01:59:01.225794 [info ] [MainThread]: 
+01:59:01.234957 [debug] [Thread-1  ]: Began running node model.taptester.dummy
+01:59:01.236076 [info ] [Thread-1  ]: 1 of 1 START view model DVD_TAP.dummy........................................... [RUN]
+01:59:01.237368 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.taptester.dummy"
+01:59:01.238298 [debug] [Thread-1  ]: Began compiling node model.taptester.dummy
+01:59:01.239237 [debug] [Thread-1  ]: Compiling model.taptester.dummy
+01:59:01.245557 [debug] [Thread-1  ]: Writing injected SQL for node "model.taptester.dummy"
+01:59:01.259709 [debug] [Thread-1  ]: finished collecting timing info
+01:59:01.260628 [debug] [Thread-1  ]: Began executing node model.taptester.dummy
+01:59:01.311387 [debug] [Thread-1  ]: Writing runtime SQL for node "model.taptester.dummy"
+01:59:01.325271 [debug] [Thread-1  ]: Using snowflake connection "model.taptester.dummy"
+01:59:01.325820 [debug] [Thread-1  ]: On model.taptester.dummy: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "taptester", "target_name": "dev", "node_id": "model.taptester.dummy"} */
+
+  create or replace  view FIVETRAN_DATABASE_DVD.DVD_TAP.dummy 
+  
+   as (
+    select 1 as number_
+  );
+01:59:01.326308 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+01:59:01.942479 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.62 seconds
+01:59:01.955658 [debug] [Thread-1  ]: finished collecting timing info
+01:59:01.956511 [debug] [Thread-1  ]: On model.taptester.dummy: Close
+01:59:02.072962 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '694c517e-22f3-4e47-a4cf-48a73f67f6cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8501edbdf0>]}
+01:59:02.074020 [info ] [Thread-1  ]: 1 of 1 OK created view model DVD_TAP.dummy...................................... [[32mSUCCESS 1[0m in 0.84s]
+01:59:02.074963 [debug] [Thread-1  ]: Finished running node model.taptester.dummy
+01:59:02.077211 [debug] [MainThread]: Acquiring new snowflake connection "master"
+01:59:02.078202 [info ] [MainThread]: 
+01:59:02.079083 [info ] [MainThread]: Finished running 1 view model in 4.00s.
+01:59:02.079983 [debug] [MainThread]: Connection 'master' was properly closed.
+01:59:02.080636 [debug] [MainThread]: Connection 'model.taptester.dummy' was properly closed.
+01:59:02.123810 [info ] [MainThread]: 
+01:59:02.124519 [info ] [MainThread]: [32mCompleted successfully[0m
+01:59:02.125548 [info ] [MainThread]: 
+01:59:02.126495 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+01:59:02.127697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8502d8c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8502d8caf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8502d8ce20>]}

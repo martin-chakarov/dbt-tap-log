@@ -1,11 +1,12 @@
 # Choose the version of dbt that will run the project.
 # Supported versions are listed in https://fivetran.com/docs/transformations/dbt/setup-guide#prerequisites.
 # If the version is not specified, dbt 0.18.0 will be used.
-dbtVersion: 0.18.0
 
 jobs:
-  - name: daily
-    schedule: 0 12 * * * # This example will run every day at 12:00pm
+  - name: daytime
+    schedule: 0 12 * * *
     steps:
-      - name: full run
-        command: dbt run
+      - name: debug
+        command: dbt debug
+      - name: run dummy
+        command: dbt run -m dummy
