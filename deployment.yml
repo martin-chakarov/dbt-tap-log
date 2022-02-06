@@ -3,7 +3,7 @@
 # If the version is not specified, dbt 0.18.0 will be used.
 
 jobs:
-  - name: daytime
+  - name: daytime18
     schedule: 0 12 * * *
     steps:
       - name: run dummy
