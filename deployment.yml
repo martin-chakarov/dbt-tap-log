@@ -6,7 +6,5 @@ jobs:
   - name: daytime
     schedule: 0 12 * * *
     steps:
-      - name: debug
-        command: dbt debug
       - name: run dummy
         command: dbt run -m dummy
