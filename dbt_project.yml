@@ -39,5 +39,5 @@ models:
 
 vars:
   fivetran_log:
-    fivetran_log_database: FIVETRAN_DATABASE_DVD
-    fivetran_log_schema: DSM_FIVETRAN_LOG
+    fivetran_log_database: FIVETRAN_DATABASE_MARTIN
+    fivetran_log_schema: DBT_TAP_LOG
