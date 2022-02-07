@@ -37,7 +37,7 @@ models:
     example:
       +materialized: view
 
-vars:
-  fivetran_log:
-    fivetran_log_database: FIVETRAN_DATABASE_MARTIN
-    fivetran_log_schema: FIVETRAN_LOG
+# vars:
+#   fivetran_log:
+#     fivetran_log_database: FIVETRAN_DATABASE_MARTIN
+#     fivetran_log_schema: FIVETRAN_LOG
